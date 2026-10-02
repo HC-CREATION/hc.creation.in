@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0d1117" />
+    <meta name="description" content="Sign in or create your HC.CREATION account to access live coding classes, cybersecurity workshops, recorded sessions, and practical projects." />
+    <meta name="keywords" content="HC Creation Login, Student Portal, Sign In, Sign Up, Coding Classes, Cybersecurity" />
+    <meta name="author" content="HC.CREATION" />
+    <link rel="icon" type="image/png" href="Logo HC.png" />
+    <title>Login & Sign Up | HC.CREATION</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <label class="Logo">HC.CREATION</label>
+      </div>
+      <ul class="sidebar">
+        <li onclick="hideSidebar()">
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#e8eaed">
+              <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+        <li>
+          <a href="Services.html">Services</a>
+        </li>
+        <li>
+          <a href="About.html">About Us</a>
+        </li>
+        <li>
+          <a href="Contact Us.html">Contact Us</a>
+        </li>
+        <li>
+          <a href="Login.html" class="active">Login</a>
+        </li>
+      </ul>
+      <ul>
+        <li class="hideOnMobile">
+          <a href="index.html">Home</a>
+        </li>
+        <li class="hideOnMobile">
+          <a href="Services.html">Services</a>
+        </li>
+        <li class="hideOnMobile">
+          <a href="About.html">About Us</a>
+        </li>
+        <li class="hideOnMobile">
+          <a href="Contact Us.html">Contact Us</a>
+        </li>
+        <li class="hideOnMobile">
+          <a href="Login.html" class="active">Login</a>
+        </li>
+        <li class="menu-button" onclick="showSidebar()">
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#e8eaed">
+              <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <main class="auth-page-container">
+      <div class="auth-card">
+        <div class="auth-header">
+          <span class="about-badge">STUDENT PORTAL</span>
+          <h1 class="auth-title">Welcome to <span>HC.CREATION</span></h1>
+          <p class="auth-subtitle">
+            Sign in to access live classes and recorded lectures, or create a new student account to get started.
+          </p>
+        </div>
+
+        <!-- Tab Controls -->
+        <div class="auth-tabs" role="tablist">
+          <button
+            type="button"
+            id="tab-btn-login"
+            class="auth-tab active"
+            role="tab"
+            aria-selected="true"
+            aria-controls="panel-login"
+            onclick="switchAuthTab('login')"
+          >
+            Sign In
+          </button>
+          <button
+            type="button"
+            id="tab-btn-signup"
+            class="auth-tab"
+            role="tab"
+            aria-selected="false"
+            aria-controls="panel-signup"
+            onclick="switchAuthTab('signup')"
+          >
+            Create Account
+          </button>
+        </div>
+
+        <!-- 1. LOGIN FORM PANEL -->
+        <div id="panel-login" class="auth-panel" role="tabpanel" aria-labelledby="tab-btn-login">
+          <form id="loginForm" method="POST" action="/login" class="auth-form" onsubmit="return handleLoginSubmit(event)">
+            <div class="form-group">
+              <label for="login-username">Username or Email</label>
+              <div class="input-wrapper">
+                <span class="input-icon">👤</span>
+                <input
+                  type="text"
+                  id="login-username"
+                  name="username"
+                  placeholder="Enter your username or email"
+                  required
+                  autocomplete="username"
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="label-row">
+                <label for="login-password">Password</label>
+                <a href="#" class="forgot-link">Forgot Password?</a>
+              </div>
+              <div class="input-wrapper">
+                <span class="input-icon">🔒</span>
+                <input
+                  type="password"
+                  id="login-password"
+                  name="password"
+                  placeholder="Enter your password"
+                  required
+                  autocomplete="current-password"
+                />
+                <button
+                  type="button"
+                  class="toggle-password"
+                  onclick="togglePasswordVisibility('login-password', this)"
+                  aria-label="Toggle password visibility"
+                >
+                  👁️
+                </button>
+              </div>
+            </div>
+
+            <div class="form-options">
+              <label class="checkbox-label">
+                <input type="checkbox" name="remember" id="remember-me" />
+                <span>Remember me for 30 days</span>
+              </label>
+            </div>
+
+            <button type="submit" class="auth-submit-btn">
+              <span>Sign In to Dashboard &rarr;</span>
+            </button>
+
+            <p class="switch-auth-text">
+              Don't have an account yet?
+              <a href="javascript:void(0)" onclick="switchAuthTab('signup')">Sign Up Here</a>
+            </p>
+          </form>
+        </div>
+
+        <!-- 2. SIGNUP FORM PANEL -->
+        <div id="panel-signup" class="auth-panel hidden" role="tabpanel" aria-labelledby="tab-btn-signup">
+          <form id="signupForm" method="POST" action="/signup" class="auth-form" onsubmit="return handleSignupSubmit(event)">
+            <div class="form-group">
+              <label for="signup-fullname">Full Name</label>
+              <div class="input-wrapper">
+                <span class="input-icon">📛</span>
+                <input
+                  type="text"
+                  id="signup-fullname"
+                  name="fullname"
+                  placeholder="e.g. John Doe"
+                  required
+                  autocomplete="name"
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="signup-username">Username</label>
+              <div class="input-wrapper">
+                <span class="input-icon">👤</span>
+                <input
+                  type="text"
+                  id="signup-username"
+                  name="username"
+                  placeholder="Choose a unique username"
+                  required
+                  autocomplete="username"
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="signup-email">Email Address</label>
+              <div class="input-wrapper">
+                <span class="input-icon">✉️</span>
+                <input
+                  type="email"
+                  id="signup-email"
+                  name="email"
+                  placeholder="you@example.com"
+                  required
+                  autocomplete="email"
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="signup-password">Password</label>
+              <div class="input-wrapper">
+                <span class="input-icon">🔒</span>
+                <input
+                  type="password"
+                  id="signup-password"
+                  name="password"
+                  placeholder="Create a strong password (min 6 chars)"
+                  required
+                  minlength="6"
+                  autocomplete="new-password"
+                />
+                <button
+                  type="button"
+                  class="toggle-password"
+                  onclick="togglePasswordVisibility('signup-password', this)"
+                  aria-label="Toggle password visibility"
+                >
+                  👁️
+                </button>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="signup-confirm-password">Confirm Password</label>
+              <div class="input-wrapper">
+                <span class="input-icon">🛡️</span>
+                <input
+                  type="password"
+                  id="signup-confirm-password"
+                  name="confirm_password"
+                  placeholder="Re-enter your password"
+                  required
+                  autocomplete="new-password"
+                />
+                <button
+                  type="button"
+                  class="toggle-password"
+                  onclick="togglePasswordVisibility('signup-confirm-password', this)"
+                  aria-label="Toggle password visibility"
+                >
+                  👁️
+                </button>
+              </div>
+              <span id="password-match-error" class="input-error-msg"></span>
+            </div>
+
+            <div class="form-options">
+              <label class="checkbox-label">
+                <input type="checkbox" name="terms" id="agree-terms" required />
+                <span>I agree to HC.CREATION <a href="#" class="terms-link">Terms of Service</a> &amp; <a href="#" class="terms-link">Privacy Policy</a></span>
+              </label>
+            </div>
+
+            <button type="submit" class="auth-submit-btn">
+              <span>Create Student Account &rarr;</span>
+            </button>
+
+            <p class="switch-auth-text">
+              Already have an account?
+              <a href="javascript:void(0)" onclick="switchAuthTab('login')">Sign In Here</a>
+            </p>
+          </form>
+        </div>
+
+        <div class="auth-security-badge">
+          🔒 256-Bit Encrypted Secure Student Portal
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>About Us</h3>
+            <p>Providing high-quality online learning experiences with live classes, projects, and dedicated support to help you succeed.</p>
+          </div>
+
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+              <li>
+                <a href="index.html">Home</a>
+              </li>
+              <li>
+                <a href="Services.html">Services</a>
+              </li>
+              <li>
+                <a href="About.html">About Us</a>
+              </li>
+              <li>
+                <a href="Contact Us.html">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h3>Contact Us</h3>
+            <p>
+              Email: <a href="mailto:himeshchitte8@gmail.com" class="touch-target">himeshchitte8@gmail.com</a>
+            </p>
+            <p>
+              Phone: <a href="tel:+919372904307" class="touch-target">+91-9372904307</a>
+            </p>
+            <p>
+              Address: <a href="https://maps.app.goo.gl/KZtb7geVfrtwzb47A" target="_blank" rel="noopener" class="touch-target">Tank road, kashi nagar, Bhandup West, Mumbai - 400078</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2026 @HC.CREATION All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Client-side Tab Switcher & Validation Helpers -->
+    <script>
+      function switchAuthTab(targetTab) {
+        const loginTab = document.getElementById('tab-btn-login');
+        const signupTab = document.getElementById('tab-btn-signup');
+        const loginPanel = document.getElementById('panel-login');
+        const signupPanel = document.getElementById('panel-signup');
+
+        if (targetTab === 'signup') {
+          loginTab.classList.remove('active');
+          loginTab.setAttribute('aria-selected', 'false');
+          signupTab.classList.add('active');
+          signupTab.setAttribute('aria-selected', 'true');
+
+          loginPanel.classList.add('hidden');
+          signupPanel.classList.remove('hidden');
+        } else {
+          signupTab.classList.remove('active');
+          signupTab.setAttribute('aria-selected', 'false');
+          loginTab.classList.add('active');
+          loginTab.setAttribute('aria-selected', 'true');
+
+          signupPanel.classList.add('hidden');
+          loginPanel.classList.remove('hidden');
+        }
+      }
+
+      function togglePasswordVisibility(inputId, btn) {
+        const input = document.getElementById(inputId);
+        if (input.type === 'password') {
+          input.type = 'text';
+          btn.textContent = '🙈';
+        } else {
+          input.type = 'password';
+          btn.textContent = '👁️';
+        }
+      }
+
+      function handleSignupSubmit(event) {
+        const pwd = document.getElementById('signup-password').value;
+        const confirmPwd = document.getElementById('signup-confirm-password').value;
+        const errorMsg = document.getElementById('password-match-error');
+
+        if (pwd !== confirmPwd) {
+          errorMsg.textContent = 'Passwords do not match. Please re-enter.';
+          errorMsg.style.display = 'block';
+          event.preventDefault();
+          return false;
+        }
+        errorMsg.style.display = 'none';
+        return true;
+      }
+
+      function handleLoginSubmit(event) {
+        return true;
+      }
+    </script>
+  </body>
+</html>

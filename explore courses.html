@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Explore Python, Web Development, Cybersecurity, Linux and CEH courses at HC.CREATION with live classes, projects and expert mentorship." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="Logo HC.png" />
+    <title>Explore Courses | HC.CREATION</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <script src="index.js"></script>
+  <script>
+    AOS.init()
+  </script>
+  <body>
+    <nav>
+      <div class="logo">
+        <label class="Logo">HC.CREATION</label>
+      </div>
+      <ul class="sidebar">
+        <li onclick="hideSidebar()">
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#e8eaed">
+              <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+        <li>
+          <a href="Services.html">Services</a>
+        </li>
+        <li>
+          <a href="About.html">About Us</a>
+        </li>
+        <li>
+          <a href="Contact Us.html">Contact Us</a>
+        </li>
+        <li>
+          <a href="Login.html">Login</a>
+        </li>
+      </ul>
+      <ul>
+        <!-- <li><a href="index.html" class="Logo">HC.CREATION</a></li> -->
+        <li class="hideOnMobile">
+          <a href="index.html">Home</a>
+        </li>
+        <li class="hideOnMobile">
+          <a href="Services.html">Services</a>
+        </li>
+        <li class="hideOnMobile">
+          <a href="About.html">About Us</a>
+        </li>
+        <li class="hideOnMobile">
+          <a href="Contact Us.html">Contact Us</a>
+        </li>
+        <li class="hideOnMobile">
+          <a href="Login.html">Login</a>
+        </li>
+        <li class="menu-button" onclick="showSidebar()">
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#e8eaed">
+              <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <header class="hero">
+      <div class="hero-h1">
+        <h1 data-aos="fade-down">Our Courses!</h1><br />
+        <p data-aos="fade-up">
+          <strong>
+            Our expert-led courses empower students with essential real-world skills <br />
+            and insights for professional success.
+          </strong>
+        </p>
+      </div>
+    </header>
+    <section class="courses-heading">
+      <h2>Explore Our Popular Courses</h2>
+      <p>Learn practical skills through live classes, hands-on projects and expert mentorship.</p>
+    </section>
+
+    <section class="courses">
+      <div class="course-card" data-aos="zoom-in">
+        <h2>💻 Web Development</h2>
+
+        <p>Learn HTML, CSS, JavaScript and modern web development by building real-world projects.</p>
+
+        <div class="course-info">
+          <span>8 Weeks</span>
+          <span>Beginner</span>
+        </div>
+
+        <button class="enroll-btn">Enroll Now</button>
+      </div>
+
+      <div class="course-card" data-aos="zoom-in" data-aos-delay="100">
+        <h2>🛡️ CEH Preparation</h2>
+
+        <p>Prepare for Certified Ethical Hacker certification with practical labs and penetration testing concepts.</p>
+
+        <div class="course-info">
+          <span>12 Weeks</span>
+          <span>Intermediate</span>
+        </div>
+
+        <button class="enroll-btn">Enroll Now</button>
+      </div>
+
+      <div class="course-card" data-aos="zoom-in" data-aos-delay="200">
+        <h2>🔐 Cyber Security</h2>
+
+        <p>Learn network security, threat analysis, vulnerability assessment and defense strategies.</p>
+
+        <div class="course-info">
+          <span>12 Weeks</span>
+          <span>Intermediate</span>
+        </div>
+
+        <button class="enroll-btn">Enroll Now</button>
+      </div>
+
+      <div class="course-card" data-aos="zoom-in" data-aos-delay="300">
+        <h2>🐍 Python Programming</h2>
+
+        <p>Master Python from basics to advanced concepts with practical coding projects.</p>
+
+        <div class="course-info">
+          <span>8 Weeks</span>
+          <span>Beginner</span>
+        </div>
+
+        <button class="enroll-btn">Enroll Now</button>
+      </div>
+
+      <div class="course-card" data-aos="zoom-in" data-aos-delay="400">
+        <h2>🐧 Linux Fundamentals</h2>
+
+        <p>Learn Linux commands, file management, permissions and system administration basics.</p>
+
+        <div class="course-info">
+          <span>6 Weeks</span>
+          <span>Beginner</span>
+        </div>
+
+        <button class="enroll-btn">Enroll Now</button>
+      </div>
+
+      <div class="course-card" data-aos="zoom-in" data-aos-delay="500">
+        <h2>🌐 Networking Basics</h2>
+
+        <p>Understand LAN, WAN, IP addressing, routing, switching and network fundamentals.</p>
+
+        <div class="course-info">
+          <span>6 Weeks</span>
+          <span>Beginner</span>
+        </div>
+
+        <button class="enroll-btn">Enroll Now</button>
+      </div>
+    </section>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>About Us</h3>
+            <p>Providing high-quality online learning experiences with live classes, projects, and dedicated support to help you succeed.</p>
+          </div>
+
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+              <li>
+                <a href="index.html">Home</a>
+              </li>
+              <li>
+                <a href="Services.html">Services</a>
+              </li>
+              <li>
+                <a href="About.html">About Us</a>
+              </li>
+              <li>
+                <a href="Contact Us.html">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h3>Contact Us</h3>
+            <p>
+              Email: <a href="mailto:himeshchitte8@gmail.com" class="touch-target">himeshchitte8@gmail.com</a>
+            </p>
+            <p>
+              Phone: <a href="tel:+919372904307" class="touch-target">+91-9372904307</a>
+            </p>
+            <p>
+              Address: <a href="https://maps.app.goo.gl/KZtb7geVfrtwzb47A" target="_blank" rel="noopener">Tank road, kashi nagar, Bhandup West, Mumbai - 400078</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2026 @HC.CREATION All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

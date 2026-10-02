@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0d1117" />
+    <meta name="description" content="Explore real-world projects built by HC.CREATION students - from AI assistants to habit trackers and cybersecurity tools." />
+    <meta name="keywords" content="HC Creation Projects, Student Projects, Python Jarvis, Motiv8, Web Development Projects, Cybersecurity Tools" />
+    <meta name="author" content="HC.CREATION" />
+    <link rel="icon" type="image/png" href="Logo HC.png" />
+    <title>All Projects | HC.CREATION</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js" defer></script>
+  </head>
+
+  <body>
+    <nav>
+      <div class="logo">
+        <label class="Logo">HC.CREATION</label>
+      </div>
+      <ul class="sidebar">
+        <li onclick="hideSidebar()">
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#e8eaed">
+              <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+        <li>
+          <a href="Services.html">Services</a>
+        </li>
+        <li>
+          <a href="About.html">About Us</a>
+        </li>
+        <li>
+          <a href="Contact Us.html">Contact Us</a>
+        </li>
+        <li>
+          <a href="Login.html">Login</a>
+        </li>
+      </ul>
+      <ul>
+        <li class="hideOnMobile">
+          <a href="index.html">Home</a>
+        </li>
+        <li class="hideOnMobile">
+          <a href="Services.html">Services</a>
+        </li>
+        <li class="hideOnMobile">
+          <a href="About.html">About Us</a>
+        </li>
+        <li class="hideOnMobile">
+          <a href="Contact Us.html">Contact Us</a>
+        </li>
+        <li class="hideOnMobile">
+          <a href="Login.html">Login</a>
+        </li>
+        <li class="menu-button" onclick="showSidebar()">
+          <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#e8eaed">
+              <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <main class="projects-page-container">
+      <header class="projects-hero">
+        <span class="about-badge">OUR PORTFOLIO</span>
+        <h1>Real-World <span>Student Projects</span></h1>
+        <p>
+          We build projects based on real-world scenarios for deeper understanding. Students apply practical concepts, develop problem-solving abilities, and build strong portfolios.
+        </p>
+      </header>
+
+      <section class="projects-grid">
+        <!-- Project 1: Jarvis AI Assistant -->
+        <div class="project-card">
+          <div class="project-card-header">
+            <span class="project-tag">Python &bull; AI &bull; Speech Recognition</span>
+            <h3>Jarvis AI Assistant</h3>
+          </div>
+          <div class="projects-img">
+            <img src="https://getwallpapers.com/wallpaper/full/7/6/c/95326.jpg" alt="Jarvis AI Assistant" loading="lazy" />
+          </div>
+          <p>
+            An advanced personal desktop assistant capable of speech recognition, system automation, web browsing, schedule reminders, and intelligent responses.
+          </p>
+          <div class="project-actions">
+            <a href="Services.html" class="project-btn">Explore Course</a>
+            <a href="Contact Us.html" class="project-btn secondary">Request Demo</a>
+          </div>
+        </div>
+
+        <!-- Project 2: Motiv8 Habit Tracker -->
+        <div class="project-card">
+          <div class="project-card-header">
+            <span class="project-tag">Full Stack &bull; Productivity &bull; Analytics</span>
+            <h3>Motiv8 Platform</h3>
+          </div>
+          <div class="projects-img">
+            <img src="Motiv8 Website.png" alt="Motiv8 Habit Tracker" loading="lazy" />
+          </div>
+          <p>
+            A productivity and habit tracking web platform that helps individuals develop positive daily habits, maintain streaks, and analyze weekly performance.
+          </p>
+          <div class="project-actions">
+            <a href="Services.html" class="project-btn">Explore Course</a>
+            <a href="Contact Us.html" class="project-btn secondary">Request Demo</a>
+          </div>
+        </div>
+
+        <!-- Project 3: Animated Login & Signup -->
+        <div class="project-card">
+          <div class="project-card-header">
+            <span class="project-tag">Frontend &bull; CSS3 &bull; Responsive UI</span>
+            <h3>Animated Auth Portal</h3>
+          </div>
+          <div class="projects-img">
+            <img src="Animated Login Page.png" alt="Animated Login Page" loading="lazy" />
+          </div>
+          <p>
+            A split-screen responsive authentication portal with smooth sliding transitions, modern input controls, password show/hide, and responsive layout.
+          </p>
+          <div class="project-actions">
+            <a href="Login.html" class="project-btn">Live Portal</a>
+            <a href="Contact Us.html" class="project-btn secondary">View Code</a>
+          </div>
+        </div>
+
+        <!-- Project 4: Hacker Terminal Login -->
+        <div class="project-card">
+          <div class="project-card-header">
+            <span class="project-tag">Cybersecurity &bull; Canvas &bull; Dark Mode</span>
+            <h3>Hacker Terminal Login</h3>
+          </div>
+          <div class="projects-img">
+            <img src="Hacker Login page.png" alt="Hacker Login Portal" loading="lazy" />
+          </div>
+          <p>
+            A cybersecurity-inspired interactive authentication screen featuring dynamic neon coordinate grids, terminal styling, and encrypted theme components.
+          </p>
+          <div class="project-actions">
+            <a href="Login.html" class="project-btn">Live Portal</a>
+            <a href="Contact Us.html" class="project-btn secondary">View Code</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>About Us</h3>
+            <p>Providing high-quality online learning experiences with live classes, projects, and dedicated support to help you succeed.</p>
+          </div>
+
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+              <li>
+                <a href="index.html">Home</a>
+              </li>
+              <li>
+                <a href="Services.html">Services</a>
+              </li>
+              <li>
+                <a href="About.html">About Us</a>
+              </li>
+              <li>
+                <a href="Contact Us.html">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h3>Contact Us</h3>
+            <p>
+              Email: <a href="mailto:himeshchitte8@gmail.com" class="touch-target">himeshchitte8@gmail.com</a>
+            </p>
+            <p>
+              Phone: <a href="tel:+919372904307" class="touch-target">+91-9372904307</a>
+            </p>
+            <p>
+              Address: <a href="https://maps.app.goo.gl/KZtb7geVfrtwzb47A" target="_blank" rel="noopener" class="touch-target">Tank road, kashi nagar, Bhandup West, Mumbai - 400078</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2026 @HC.CREATION All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
